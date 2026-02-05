@@ -27,7 +27,9 @@ from cinema.permissions import IsAdminOrIfAuthenticatedReadOnly
 
 
 class GenreViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
 ):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
@@ -36,7 +38,9 @@ class GenreViewSet(
 
 
 class ActorViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
 ):
     queryset = Actor.objects.all()
     serializer_class = ActorSerializer
@@ -45,7 +49,9 @@ class ActorViewSet(
 
 
 class CinemaHallViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
 ):
     queryset = CinemaHall.objects.all()
     serializer_class = CinemaHallSerializer
@@ -57,7 +63,7 @@ class MovieViewSet(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
-    viewsets.GenericViewSet,
+    viewsets.GenericViewSet
 ):
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
@@ -134,7 +140,9 @@ class MovieSessionViewSet(viewsets.ModelViewSet):
 
 
 class OrderViewSet(
-    mixins.ListModelMixin, mixins.CreateModelMixin, viewsets.GenericViewSet
+    mixins.ListModelMixin,
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
 ):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
